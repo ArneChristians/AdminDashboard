@@ -57,3 +57,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CSS begining after CSS reset*/
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.navbar {
+    grid-column: 1 / 2;
+    height: 100vh;
+    background-color: #30364F;
+    color: #F0F0DB;
+}
+
+.mainContentContainer
+.topContainer {
+    grid-column: 2 / 3;
+}
+
