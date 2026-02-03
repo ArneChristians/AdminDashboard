@@ -62,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 5fr;
 }
 
+.rightSideContainer {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
 .navbar {
     display: grid;
     grid-template-rows: 1fr 10fr;
@@ -84,6 +89,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
 }
 
+.logoContainer i {
+    font-size: 30px;
+}
+
 .navContainer {
     display: grid;
     grid-row: 2 / 3;
@@ -93,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 .settings,
 .tabs {
     display: flex;
-    gap: 6px;
+    gap: 15px;
     flex-direction: column;
 
     list-style-type: none;
@@ -101,10 +110,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 12px;
 }
 
+.settings {
+    align-self: end;
+    margin-bottom: 20px;
+}
+
 .tabItem {
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .mainContentContainer,
@@ -113,17 +128,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .topContainer {
+    grid-row: 1 / 2;
+
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
 
     padding: 8px;
+    background-color: #FAF8F1;
 }
 
 .searchbar {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 
+    margin-left: 20px;
 }
 
 .searchbar input {
@@ -147,6 +166,85 @@ h1, h2, h3, h4, h5, h6 {
 
 .profileAlert span {
     align-self: center;
-    font-weight: 600;
+    font-weight: 700;
 }
 
+.secondTopContainer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.profile {
+    display: flex;
+    align-self: center;
+    margin-left: 20px;
+    gap: 8px;
+}
+
+.profilePictureContainer {
+    align-self: center;
+    font-size: 40px;
+}
+
+.nameContainer {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.post {
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    
+    justify-self: end;
+    gap: 15px;
+}
+
+.post button {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 68%;
+    border-radius: 20px;
+    border-style: none;
+    
+    color: white;
+    font-weight: 600;
+    background-color: #30364F;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.mainContentContainer {
+    grid-row: 2 / 3;
+    padding: 20px 20px 20px 15px;
+
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+}
+
+.projects {
+    grid-column: 1 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
+}
+
+.title {
+    grid-template-columns: 1 / 2;
+    grid-template-rows: 1 / 2;
+}
+
+.projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    align-self: start;
+}
+
+.trending,
+.anncouncements {
+    grid-column: 3 / 4;
+}
