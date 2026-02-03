@@ -59,18 +59,94 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 .navbar {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-columns: 1fr;
+
+
     grid-column: 1 / 2;
     height: 100vh;
     background-color: #30364F;
     color: #F0F0DB;
 }
 
-.mainContentContainer
+.logoContainer {
+    display: flex;
+    grid-row: 1 / 2;
+    align-self: start;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 5px;
+}
+
+.navContainer {
+    display: grid;
+    grid-row: 2 / 3;
+}
+
+
+.settings,
+.tabs {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 12px;
+}
+
+.tabItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mainContentContainer,
 .topContainer {
     grid-column: 2 / 3;
+}
+
+.topContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    padding: 8px;
+}
+
+.searchbar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+}
+
+.searchbar input {
+    width: 70%;
+}
+
+.profileAlert {
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    margin-right: 20px;
+    justify-self: end;
+    align-self: start;
+    gap: 30px;
+}
+
+.profileAlert i {
+    font-size: 30px;
+}
+
+.profileAlert span {
+    align-self: center;
+    font-weight: 600;
 }
 
