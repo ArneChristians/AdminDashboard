@@ -67,8 +67,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #rightSideContainer {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     min-height: 100vh;
+    
 }
 
 .navbar {
@@ -128,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mainContentContainer,
 .topContainer {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
 }
 
 .topContainer {
@@ -140,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
     padding: 8px;
     background-color: white;
+    width: auto;
 }
 
 .searchbar {
@@ -245,6 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 .title {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    font-size: 25px;
 }
 
 .projectContainer {
@@ -259,6 +263,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 15px;
     margin-right: 20px;
     margin-top: 15px;
+    max-height: 100%;
 }
 
 .card {
@@ -289,13 +294,67 @@ h1, h2, h3, h4, h5, h6 {
 
 .sideViewContainer {
     grid-column: 3 / 4;
-    background-color: grey;
 
     display: grid;
     grid-template-rows: 1fr 10fr;
-    
+
     height: 100%;
     max-height: 100%;
     overflow: auto;
     align-self: start;
+}
+
+#announcementContainer {
+    margin-top: 15px;
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+.innerAnnouncementContainer {
+    padding: 15px;
+}
+
+.announcement h3 {
+    font-size: 20px;
+}
+
+.announcement p {
+    padding-top: 0px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#border {
+    border-bottom: #30364F solid 1px;
+    padding-bottom: 15px;
+}
+
+.trending {
+    margin-top: 20px;
+}
+
+#trendingContainer {
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 5px;
+
+    padding: 15px;
+    gap: 10px;
+}
+
+.profileTrendContainer {
+    display: flex;
+    align-items: center;
+}
+
+.profileTrendContainer i {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+
+.atAndTitle {
+    display: flex;
+    flex-direction: column;
 }
