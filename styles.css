@@ -22,6 +22,8 @@ body {
   -webkit-font-smoothing: antialiased;
 
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 /* 6. Improve media defaults */
@@ -60,11 +62,13 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    min-height: 100vh;
 }
 
-.rightSideContainer {
+#rightSideContainer {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -135,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: 1fr 1fr;
 
     padding: 8px;
-    background-color: #FAF8F1;
+    background-color: white;
 }
 
 .searchbar {
@@ -161,7 +165,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profileAlert i {
-    font-size: 30px;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 .profileAlert span {
@@ -213,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #30364F;
     align-self: center;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .mainContentContainer {
@@ -221,6 +227,10 @@ h1, h2, h3, h4, h5, h6 {
 
     display: grid;
     grid-template-columns: 3fr 3fr 2fr;
+    background-color: #F7F7F7;
+    max-height: 100%;
+    overflow-y: auto;
+    align-content: start;
 }
 
 .projects {
@@ -228,23 +238,64 @@ h1, h2, h3, h4, h5, h6 {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: auto 1fr;
+    min-height: 0;
 }
 
 .title {
-    grid-template-columns: 1 / 2;
-    grid-template-rows: 1 / 2;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .projectContainer {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
     align-self: start;
+    gap: 15px;
+    margin-right: 20px;
+    margin-top: 15px;
 }
 
-.trending,
-.anncouncements {
+.card {
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    
+    border-left: #30364F solid 6px;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+
+.card h3,
+.card span {
+    margin-left: 5px;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+    margin-right: 5px;
+}
+
+.iconContainer i {
+    cursor: pointer;
+}
+
+.sideViewContainer {
     grid-column: 3 / 4;
+    background-color: grey;
+
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    align-self: start;
 }
