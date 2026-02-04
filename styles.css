@@ -330,6 +330,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 15px;
 }
 
+.margin {
+    margin-top: 8px;
+}
+
 .trending {
     margin-top: 20px;
 }
@@ -353,6 +357,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 10px;
 }
 
+.at {
+    margin-top: 10px;
+}
 
 .atAndTitle {
     display: flex;
